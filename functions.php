@@ -31,7 +31,9 @@ function login($username,$password){
 function find_rides($number){
   global $connection;
   $query="SELECT * FROM requests ";
-  $query.="ORDER BY time ";
+  $query.="LEFT JOIN requests_users ON requests.id=requests_users.request_id LEFT JOIN users ON users.id=requests_users.user_id ";
+
+  $query.="ORDER BY requests.time ";
   $query.="LIMIT {$number}";
   $result= mysqli_query($connection,$query);
   return $query;
