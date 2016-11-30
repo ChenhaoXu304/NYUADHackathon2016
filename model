@@ -19,7 +19,7 @@ FOREIGN KEY (start_id)
 REFERENCES places(id)
 FOREIGN KEY (dest_id) 
 REFERENCES places(id) 
-)
+);
 
 CREATE TABLE places 
 (
@@ -28,7 +28,7 @@ name varchar(30) NOT NULL,
 lat DOUBLE NOT NULL,
 lon DOUBLE NOT NULL
 PRIMARY KEY (id)
-)
+);
 
 CREATE TABLE requests-users
 (
@@ -42,7 +42,7 @@ FOREIGN KEY (user_id)
 REFERENCES users(id) 
 ON DELETE CASCADE 
 ON UPDATE CASCADE
-)
+);
 
 CREATE TABLE messages
 (
@@ -60,5 +60,5 @@ FOREIGN KEY (to_id)
 REFERENCES users(id) 
 ON DELETE CASCADE 
 ON UPDATE CASCADE
-)
+);
 
