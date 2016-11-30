@@ -1,2 +1,3 @@
 # NYUADHackathon2016
-A cab-pooling app
+Team: "Induction on the Reals"<br />
+Project: A cab-pooling app
